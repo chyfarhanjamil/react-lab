@@ -1,13 +1,16 @@
-import './App.css';
-import Booklist from './Components/Booklist';
-import Form from './Components/Form';
+import "./App.css";
+import Booklist from "./Components/Booklist";
+import { BookProvider } from "./Components/BookProvider";
+import Form from "./Components/Form";
 
 function App() {
   return (
-    <div className="App">
-      <Booklist/>
-      {/* <Form/> */}
-    </div>
+    <BookProvider>
+      <div className="App">
+        <Booklist />
+        {/* <Form/> */}
+      </div>
+    </BookProvider>
   );
 }
 

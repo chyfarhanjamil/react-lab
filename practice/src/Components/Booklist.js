@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Book from "./Book";
+import { BookContext } from "./BookProvider";
 import Form from "./Form";
 
 export default function Booklist() {
-  const [data, setData] = useState({
-    books: [
-      { Name: "ABC", author: "hakim" },
-      { Name: "DEF", author: "kakim" },
-      { Name: "GHI", author: "makim" },
-    ],
-  });
+  // const [data, setData] = useState({
+  //   books: [
+  //     { Name: "ABC", author: "hakim" },
+  //     { Name: "DEF", author: "kakim" },
+  //     { Name: "GHI", author: "makim" },
+  //   ],
+  // });
+
+  const [data, setData] = useContext(BookContext);
 
   let handleDelete = (index) => {
     //console.log(index);

@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
+import { BookContext } from "./BookProvider";
 
 export default function Form(props) {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
+  const [data, setData] = useContext(BookContext);
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        props.onAdd(name, author);
+        //props.onAdd(name, author);
+        setData({ books: [...data.books, { Name: name, author: author }] });
         setName("");
         setAuthor("");
       }}
