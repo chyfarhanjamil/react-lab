@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Mow the lawn",
+        "project": "House chores",
+        "secs": 4100
+    },
+    {
+        "title": "Clear paper jam",
+        "project": "Office chores",
+        "secs": 600
+    }
+]
